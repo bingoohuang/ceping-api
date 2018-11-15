@@ -1,0 +1,219 @@
+10:06:53.701 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq URL Get http://a.b.com/assess/123456/activity?format=json&beisen_account=j@h.com&page_size=10&page_index=1
+10:06:59.039 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq Response: {
+  "activity_list": [
+    {
+      "id": 481810,
+      "name": "测系test",
+      "description": "",
+      "state": 1,
+      "create_date": "2018-10-15T15:21:25.367"
+    }
+  ],
+  "total_count": 1
+}
+ActivityResult(activities=[Activity(id=481810, name=测系test, description=, state=1, createDate=2018-10-15T15:21:25.367)], totalCount=1)
+10:06:59.162 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq URL Post http://a.b.com/assess/123456/activity/testee/invite?format=json&beisen_account=j@h.com&activity_id=481810&start_time=2018-10-24%2010:06:59&end_time=2018-11-23%2010:06:59
+10:06:59.162 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq Post Params: testee_list=%5B%7B%22email%22%3A%22z%40b.com%22%7D%2C%7B%22email%22%3A%221264061151%40qq.com%22%7D%5D
+10:06:59.242 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq Response: {
+  "testee_invite_result_list": [
+    {
+      "activity_id": 481810,
+      "name": "",
+      "email": "z@b.com",
+      "sn": "1701797692114",
+      "test_url": "https://h.c.com/Login/Elink?elink=aaa",
+      "login_url": "https://h.c.com/",
+      "start_time": "2018-10-24T10:06:59.000",
+      "end_time": "2018-11-23T10:06:59.000"
+    },
+    {
+      "activity_id": 481810,
+      "name": "",
+      "email": "1@q.com",
+      "sn": "1698380457790",
+      "test_url": "https://h.c.com/Login/Elink?elink=aaa",
+      "login_url": "https://h.c.com/",
+      "start_time": "2018-10-24T10:06:59.000",
+      "end_time": "2018-11-23T10:06:59.000"
+    }
+  ],
+  "error_testee_list": []
+}
+
+
+TesteeInviteResult(testeeInvites=[TesteeInvite(activityId=481810, name=, email=z@b.com sn=1701797692114, testUrl=https://h.c.com/Login/Elink?elink=123, login_url=https://h.c.com/, startTime=2018-10-24T10:06:59.000, endTime=2018-11-23T10:06:59.000), TesteeInvite(activityId=481810, name=, email=1@q.com, sn=1698380457790, testUrl=https://h.c.com/Login/Elink?elink=4XjozfYA2lOxBAFMPL5eAyhbgllqTXVC6N0UyerNAeWETVi2i/2zjw==, login_url=https://h.c.com/, startTime=2018-10-24T10:06:59.000, endTime=2018-11-23T10:06:59.000)])
+10:06:59.250 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq URL Get http://a.b.com/assess/123456/activity/testee/state?format=json&beisen_account=j@h.com&emails=z@b.com1@q.com
+10:06:59.483 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq Response: [
+  {
+    "activity_id": 481810,
+    "testee_list": [
+      {
+        "email": "1@q.com",
+        "sn_list": [
+          {
+            "sn": "1701496053235",
+            "create_time": "2018-10-24T09:54:28.427",
+            "state": "1"
+          },
+          {
+            "sn": "1700679040183",
+            "create_time": "2018-10-24T09:56:44.997",
+            "state": "1"
+          },
+          {
+            "sn": "1701797692114",
+            "create_time": "2018-10-24T10:06:59.467",
+            "state": "1"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+
+[ActivityTesteeState(activityId=481810, testeeList=[TesteeSn(email=1@q.com, sns=[SerialNumber(sn=1497936106409, createTime=2018-10-22T20:06:31.773, state=1), SerialNumber(sn=1497982173070, createTime=2018-10-22T16:10:54.653, state=1), SerialNumber(sn=1498024172313, createTime=2018-10-22T17:56:15.220, state=1), SerialNumber(sn=1498132488728, createTime=2018-10-23T08:43:13.803, state=1), SerialNumber(sn=1498252215809, createTime=2018-10-22T19:04:40.470, state=1), SerialNumber(sn=1498293760475, createTime=2018-10-22T18:06:04.510, state=1), SerialNumber(sn=1498417224699, createTime=2018-10-18T19:43:59.353, state=2), SerialNumber(sn=1498563595598, createTime=2018-10-23T08:20:16.240, state=1), SerialNumber(sn=1498636543757, createTime=2018-10-22T18:25:56.570, state=1), SerialNumber(sn=1498723647824, createTime=2018-10-22T16:48:10.800, state=1), SerialNumber(sn=1498739030537, createTime=2018-10-22T16:40:56.850, state=1), SerialNumber(sn=1498756854224, createTime=2018-10-22T17:58:42.283, state=1), SerialNumber(sn=1498784562024, createTime=2018-10-22T18:36:07.067, state=1), SerialNumber(sn=1499004154171, createTime=2018-10-22T18:14:06.993, state=1), SerialNumber(sn=1499100818945, createTime=2018-10-22T15:58:19.040, state=1), SerialNumber(sn=1499243389823, createTime=2018-10-24T09:51:35.990, state=1), SerialNumber(sn=1499332983480, createTime=2018-10-22T16:34:43.937, state=1), SerialNumber(sn=1499447953794, createTime=2018-10-22T17:44:52.237, state=1), SerialNumber(sn=1499501404256, createTime=2018-10-22T11:35:11.767, state=1), SerialNumber(sn=1499581714123, createTime=2018-10-22T19:00:46.527, state=1), SerialNumber(sn=1499686238138, createTime=2018-10-22T17:31:14.350, state=1), SerialNumber(sn=1499696172287, createTime=2018-10-22T17:24:52.550, state=1), SerialNumber(sn=1499810479197, createTime=2018-10-22T17:52:50.813, state=1), SerialNumber(sn=1499841638349, createTime=2018-10-22T16:46:33.283, state=1), SerialNumber(sn=1499853771335, createTime=2018-10-22T17:29:04.977, state=1), SerialNumber(sn=1499897484774, createTime=2018-10-23T09:23:06.077, state=1), SerialNumber(sn=1500041059626, createTime=2018-10-22T18:09:45.923, state=1), SerialNumber(sn=1500191188308, createTime=2018-10-22T18:48:06.377, state=1), SerialNumber(sn=1500234015377, createTime=2018-10-23T10:16:27.433, state=1), SerialNumber(sn=1500414045388, createTime=2018-10-18T19:47:07.457, state=3), SerialNumber(sn=1698562424763, createTime=2018-10-22T11:27:01.303, state=1), SerialNumber(sn=1699054873443, createTime=2018-10-22T11:37:26.343, state=1), SerialNumber(sn=1698177439971, createTime=2018-10-22T11:37:44.600, state=1), SerialNumber(sn=1501209511971, createTime=2018-10-22T11:37:55.657, state=1), SerialNumber(sn=1500384754683, createTime=2018-10-22T11:39:04.080, state=1), SerialNumber(sn=1501715158893, createTime=2018-10-22T11:39:21.757, state=1), SerialNumber(sn=1698065364633, createTime=2018-10-22T13:02:06.877, state=1), SerialNumber(sn=1502095171213, createTime=2018-10-22T13:05:00.383, state=1), SerialNumber(sn=1698786827147, createTime=2018-10-22T13:05:17.310, state=1), SerialNumber(sn=1501617573535, createTime=2018-10-22T13:06:32.923, state=1), SerialNumber(sn=1698680477651, createTime=2018-10-22T13:15:13.143, state=1), SerialNumber(sn=1501870880658, createTime=2018-10-22T13:18:03.077, state=1), SerialNumber(sn=1500477937432, createTime=2018-10-22T14:17:35.460, state=1), SerialNumber(sn=1698544095697, createTime=2018-10-22T14:30:56.140, state=1), SerialNumber(sn=1501245288294, createTime=2018-10-22T14:31:31.407, state=1), SerialNumber(sn=1501487624507, createTime=2018-10-22T15:16:23.707, state=1), SerialNumber(sn=1501806853623, createTime=2018-10-22T15:19:30.467, state=1), SerialNumber(sn=1501401761025, createTime=2018-10-22T15:36:50.830, state=1), SerialNumber(sn=1500308786425, createTime=2018-10-22T15:37:51.117, state=1), SerialNumber(sn=1501480510825, createTime=2018-10-22T15:59:38.840, state=1), SerialNumber(sn=1698463364737, createTime=2018-10-22T16:04:03.697, state=1), SerialNumber(sn=1501498447804, createTime=2018-10-22T16:08:54.857, state=1), SerialNumber(sn=1500740128840, createTime=2018-10-22T16:13:10.647, state=1), SerialNumber(sn=1501757484729, createTime=2018-10-22T16:17:46.140, state=1), SerialNumber(sn=1500539195882, createTime=2018-10-22T16:23:08.363, state=1), SerialNumber(sn=1698911383149, createTime=2018-10-22T16:29:31.420, state=1), SerialNumber(sn=1500823618964, createTime=2018-10-22T16:30:21.200, state=1), SerialNumber(sn=1698790643014, createTime=2018-10-22T16:34:03.360, state=1), SerialNumber(sn=1501012136691, createTime=2018-10-22T16:34:22.673, state=1), SerialNumber(sn=1698524145912, createTime=2018-10-22T16:45:08.963, state=1), SerialNumber(sn=1502138537995, createTime=2018-10-22T16:59:34.697, state=1), SerialNumber(sn=1698858841940, createTime=2018-10-22T17:00:56.007, state=1), SerialNumber(sn=1501853666185, createTime=2018-10-22T17:08:31.047, state=1), SerialNumber(sn=1502045590204, createTime=2018-10-22T17:11:04.070, state=1), SerialNumber(sn=1500760815403, createTime=2018-10-22T17:16:23.577, state=1), SerialNumber(sn=1698162428685, createTime=2018-10-22T17:20:45.460, state=1), SerialNumber(sn=1698787289394, createTime=2018-10-22T17:21:56.443, state=1), SerialNumber(sn=1698455667851, createTime=2018-10-22T17:22:57.593, state=1), SerialNumber(sn=1698815970958, createTime=2018-10-22T17:31:05.207, state=1), SerialNumber(sn=1501580784128, createTime=2018-10-22T17:31:23.550, state=1), SerialNumber(sn=1502096177792, createTime=2018-10-22T17:43:11.040, state=1), SerialNumber(sn=1501389713144, createTime=2018-10-22T17:51:31.087, state=1), SerialNumber(sn=1699018935938, createTime=2018-10-22T17:57:45.040, state=1), SerialNumber(sn=1501798522183, createTime=2018-10-22T18:15:32.483, state=1), SerialNumber(sn=1500762429700, createTime=2018-10-22T18:26:44.510, state=1), SerialNumber(sn=1698051885666, createTime=2018-10-22T18:35:47.567, state=1), SerialNumber(sn=1501475210429, createTime=2018-10-22T18:37:51.527, state=1), SerialNumber(sn=1501204716128, createTime=2018-10-22T18:44:55.523, state=1), SerialNumber(sn=1698539006561, createTime=2018-10-22T18:46:44.087, state=1), SerialNumber(sn=1699003082698, createTime=2018-10-22T18:50:28.790, state=1), SerialNumber(sn=1501218361754, createTime=2018-10-22T20:11:04.243, state=1), SerialNumber(sn=1501680062988, createTime=2018-10-22T20:37:31.347, state=1), SerialNumber(sn=1698062540072, createTime=2018-10-23T08:23:25.423, state=1), SerialNumber(sn=1500934738038, createTime=2018-10-23T09:03:00.773, state=1), SerialNumber(sn=1500949690010, createTime=2018-10-24T09:50:00.627, state=1), SerialNumber(sn=1697944074777, createTime=2018-10-24T09:56:44.997, state=1), SerialNumber(sn=1698380457790, createTime=2018-10-24T10:06:59.467, state=1), SerialNumber(sn=1700778036818, createTime=2018-10-21T21:59:19.140, state=1), SerialNumber(sn=1699870041867, createTime=2018-10-22T11:36:03.603, state=1), SerialNumber(sn=1701294780228, createTime=2018-10-22T13:03:01.230, state=1), SerialNumber(sn=1700648063393, createTime=2018-10-22T13:05:34.203, state=1), SerialNumber(sn=1699829093433, createTime=2018-10-22T13:05:51.830, state=1), SerialNumber(sn=1699870866956, createTime=2018-10-22T13:12:15.067, state=1), SerialNumber(sn=1699895321571, createTime=2018-10-22T13:14:13.487, state=1), SerialNumber(sn=1701555970370, createTime=2018-10-22T13:20:57.067, state=1), SerialNumber(sn=1699798928486, createTime=2018-10-22T13:22:23.787, state=1), SerialNumber(sn=1702144150280, createTime=2018-10-22T13:23:27.623, state=1), SerialNumber(sn=1702076514682, createTime=2018-10-22T14:24:21.410, state=1), SerialNumber(sn=1699933308635, createTime=2018-10-22T14:27:06.380, state=1), SerialNumber(sn=1702070734407, createTime=2018-10-22T14:29:22.927, state=1), SerialNumber(sn=1699767534495, createTime=2018-10-22T14:30:26.110, state=1), SerialNumber(sn=1699541206862, createTime=2018-10-22T15:15:26.160, state=1), SerialNumber(sn=1700624287735, createTime=2018-10-22T16:11:51.837, state=1), SerialNumber(sn=1702130510264, createTime=2018-10-22T16:16:53.440, state=1), SerialNumber(sn=1699982366192, createTime=2018-10-22T16:21:33.170, state=1), SerialNumber(sn=1700453662756, createTime=2018-10-22T16:27:01.053, state=1), SerialNumber(sn=1700464993613, createTime=2018-10-22T16:28:49.833, state=1), SerialNumber(sn=1701470392513, createTime=2018-10-22T16:29:22.673, state=1), SerialNumber(sn=1700560963562, createTime=2018-10-22T16:34:58.397, state=1), SerialNumber(sn=1699581149563, createTime=2018-10-22T16:51:50.337, state=1), SerialNumber(sn=1701364903118, createTime=2018-10-22T16:52:19.853, state=2), SerialNumber(sn=1700970672961, createTime=2018-10-22T16:58:50.553, state=1), SerialNumber(sn=1699148688706, createTime=2018-10-22T17:13:46.517, state=1), SerialNumber(sn=1702019493627, createTime=2018-10-22T17:27:01.487, state=1), SerialNumber(sn=1701302983625, createTime=2018-10-22T17:30:48.593, state=1), SerialNumber(sn=1701600606012, createTime=2018-10-22T17:35:34.937, state=1), SerialNumber(sn=1700506413073, createTime=2018-10-22T17:41:46.377, state=1), SerialNumber(sn=1699313772858, createTime=2018-10-22T17:42:31.557, state=1), SerialNumber(sn=1701758401785, createTime=2018-10-22T17:50:45.327, state=1), SerialNumber(sn=1700796266692, createTime=2018-10-22T18:00:19.377, state=1), SerialNumber(sn=1699642242738, createTime=2018-10-22T18:16:58.567, state=1), SerialNumber(sn=1700464256780, createTime=2018-10-22T18:18:17.487, state=1), SerialNumber(sn=1699647358906, createTime=2018-10-22T18:19:13.747, state=1), SerialNumber(sn=1700311212707, createTime=2018-10-22T18:20:52.257, state=1), SerialNumber(sn=1700899864539, createTime=2018-10-22T18:21:23.690, state=1), SerialNumber(sn=1700043344924, createTime=2018-10-22T18:26:24.010, state=1), SerialNumber(sn=1700154970501, createTime=2018-10-22T18:31:12.707, state=1), SerialNumber(sn=1700124103176, createTime=2018-10-22T20:22:54.880, state=1), SerialNumber(sn=1700592947539, createTime=2018-10-22T20:27:48.820, state=1), SerialNumber(sn=1700298544723, createTime=2018-10-23T08:16:34.140, state=1), SerialNumber(sn=1701045939845, createTime=2018-10-23T08:36:53.610, state=1), SerialNumber(sn=1700382885871, createTime=2018-10-23T08:49:41.853, state=1), SerialNumber(sn=1699760506848, createTime=2018-10-23T09:32:55.430, state=1), SerialNumber(sn=1701859638527, createTime=2018-10-23T10:14:30.803, state=1), SerialNumber(sn=1700801451168, createTime=2018-10-24T09:50:31.770, state=1), SerialNumber(sn=1701058109639, createTime=2018-10-24T09:54:28.427, state=1)]), TesteeSn(email=z@b.com sns=[SerialNumber(sn=1500436283338, createTime=2018-10-18T19:17:11.833, state=2), SerialNumber(sn=1499155468445, createTime=2018-10-18T19:17:11.833, state=2), SerialNumber(sn=1499725772601, createTime=2018-10-18T19:43:59.353, state=2), SerialNumber(sn=1500993471588, createTime=2018-10-18T19:47:07.457, state=2), SerialNumber(sn=1499287325381, createTime=2018-10-22T11:35:11.767, state=1), SerialNumber(sn=1498896489622, createTime=2018-10-22T11:37:55.657, state=1), SerialNumber(sn=1498003146101, createTime=2018-10-22T11:39:04.080, state=1), SerialNumber(sn=1500888292608, createTime=2018-10-22T11:39:21.757, state=2), SerialNumber(sn=1498803192889, createTime=2018-10-22T13:05:00.383, state=1), SerialNumber(sn=1501011396559, createTime=2018-10-22T13:06:32.923, state=1), SerialNumber(sn=1497909981714, createTime=2018-10-22T13:18:03.077, state=1), SerialNumber(sn=1501591428831, createTime=2018-10-22T14:17:35.460, state=1), SerialNumber(sn=1501828321160, createTime=2018-10-22T14:31:31.407, state=1), SerialNumber(sn=1500886741017, createTime=2018-10-22T15:16:23.707, state=1), SerialNumber(sn=1501220703905, createTime=2018-10-22T15:19:30.467, state=3), SerialNumber(sn=1499848841781, createTime=2018-10-22T15:36:50.830, state=1), SerialNumber(sn=1500386087477, createTime=2018-10-22T15:37:51.117, state=1), SerialNumber(sn=1498721976913, createTime=2018-10-22T15:58:19.040, state=1), SerialNumber(sn=1500449199868, createTime=2018-10-22T15:59:38.840, state=1), SerialNumber(sn=1498827730464, createTime=2018-10-22T16:08:54.857, state=1), SerialNumber(sn=1501630052442, createTime=2018-10-22T16:10:54.653, state=1), SerialNumber(sn=1497927425713, createTime=2018-10-22T16:13:10.647, state=1), SerialNumber(sn=1500943368535, createTime=2018-10-22T16:17:46.140, state=1), SerialNumber(sn=1499361474807, createTime=2018-10-22T16:23:08.363, state=1), SerialNumber(sn=1501280331895, createTime=2018-10-22T16:30:21.200, state=1), SerialNumber(sn=1498697581986, createTime=2018-10-22T16:34:22.673, state=1), SerialNumber(sn=1498585382814, createTime=2018-10-22T16:34:43.937, state=1), SerialNumber(sn=1498816611706, createTime=2018-10-22T16:40:56.850, state=1), SerialNumber(sn=1497941814775, createTime=2018-10-22T16:46:33.283, state=1), SerialNumber(sn=1498399410819, createTime=2018-10-22T16:48:10.800, state=1), SerialNumber(sn=1498101957575, createTime=2018-10-22T16:59:34.697, state=1), SerialNumber(sn=1499798880867, createTime=2018-10-22T17:08:31.047, state=1), SerialNumber(sn=1498374840810, createTime=2018-10-22T17:11:04.070, state=1), SerialNumber(sn=1499982742057, createTime=2018-10-22T17:16:23.577, state=1), SerialNumber(sn=1500727801108, createTime=2018-10-22T17:24:52.550, state=1), SerialNumber(sn=1498966444251, createTime=2018-10-22T17:29:04.977, state=1), SerialNumber(sn=1499896475542, createTime=2018-10-22T17:31:14.350, state=1), SerialNumber(sn=1500503217035, createTime=2018-10-22T17:31:23.550, state=1), SerialNumber(sn=1497866152525, createTime=2018-10-22T17:43:11.040, state=1), SerialNumber(sn=1498049443143, createTime=2018-10-22T17:44:52.237, state=1), SerialNumber(sn=1501980868288, createTime=2018-10-22T17:51:31.087, state=1), SerialNumber(sn=1499550958707, createTime=2018-10-22T17:52:50.813, state=1), SerialNumber(sn=1501255168504, createTime=2018-10-22T17:56:15.220, state=1), SerialNumber(sn=1499156546695, createTime=2018-10-22T17:58:42.283, state=1), SerialNumber(sn=1498764621290, createTime=2018-10-22T18:06:04.510, state=1), SerialNumber(sn=1500873345517, createTime=2018-10-22T18:09:45.923, state=1), SerialNumber(sn=1499072587392, createTime=2018-10-22T18:14:06.993, state=1), SerialNumber(sn=1501099291355, createTime=2018-10-22T18:15:32.483, state=1), SerialNumber(sn=1501819712106, createTime=2018-10-22T18:25:56.570, state=1), SerialNumber(sn=1500395974705, createTime=2018-10-22T18:26:44.510, state=1), SerialNumber(sn=1499061485444, createTime=2018-10-22T18:36:07.067, state=1), SerialNumber(sn=1498095461152, createTime=2018-10-22T18:37:51.527, state=1), SerialNumber(sn=1499869316599, createTime=2018-10-22T18:44:55.523, state=1), SerialNumber(sn=1501197494807, createTime=2018-10-22T18:48:06.377, state=1), SerialNumber(sn=1500336351595, createTime=2018-10-22T19:00:46.527, state=1), SerialNumber(sn=1501279708598, createTime=2018-10-22T19:04:40.470, state=1), SerialNumber(sn=1499435481867, createTime=2018-10-22T20:06:31.773, state=1), SerialNumber(sn=1500183516295, createTime=2018-10-22T20:11:04.243, state=1), SerialNumber(sn=1498307228768, createTime=2018-10-22T20:37:31.347, state=1), SerialNumber(sn=1698160765196, createTime=2018-10-23T08:16:34.140, state=1), SerialNumber(sn=1498081456055, createTime=2018-10-23T08:20:16.240, state=1), SerialNumber(sn=1499350823299, createTime=2018-10-23T08:43:13.803, state=1), SerialNumber(sn=1498206353324, createTime=2018-10-23T09:03:00.773, state=1), SerialNumber(sn=1497948874981, createTime=2018-10-23T09:23:06.077, state=1), SerialNumber(sn=1501845152965, createTime=2018-10-23T10:16:27.433, state=1), SerialNumber(sn=1498812208779, createTime=2018-10-24T09:50:00.627, state=1), SerialNumber(sn=1501624802667, createTime=2018-10-24T09:51:35.990, state=1), SerialNumber(sn=1699272186871, createTime=2018-10-21T21:59:19.140, state=1), SerialNumber(sn=1698235868173, createTime=2018-10-22T11:27:01.303, state=1), SerialNumber(sn=1699708316644, createTime=2018-10-22T11:36:03.603, state=1), SerialNumber(sn=1701258796201, createTime=2018-10-22T11:37:26.343, state=1), SerialNumber(sn=1699681880119, createTime=2018-10-22T11:37:44.600, state=1), SerialNumber(sn=1698237965756, createTime=2018-10-22T13:02:06.877, state=1), SerialNumber(sn=1698372111355, createTime=2018-10-22T13:03:01.230, state=1), SerialNumber(sn=1701030731247, createTime=2018-10-22T13:05:17.310, state=1), SerialNumber(sn=1701382359555, createTime=2018-10-22T13:05:34.203, state=1), SerialNumber(sn=1699770183055, createTime=2018-10-22T13:05:51.830, state=1), SerialNumber(sn=1701781510103, createTime=2018-10-22T13:12:15.067, state=1), SerialNumber(sn=1700758380952, createTime=2018-10-22T13:14:13.487, state=1), SerialNumber(sn=1702124103125, createTime=2018-10-22T13:15:13.143, state=1), SerialNumber(sn=1701375759611, createTime=2018-10-22T13:20:57.067, state=1), SerialNumber(sn=1699720190389, createTime=2018-10-22T13:22:23.787, state=1), SerialNumber(sn=1701182575347, createTime=2018-10-22T13:23:27.623, state=1), SerialNumber(sn=1699073087744, createTime=2018-10-22T14:24:21.410, state=1), SerialNumber(sn=1701024149118, createTime=2018-10-22T14:27:06.380, state=1), SerialNumber(sn=1699540616968, createTime=2018-10-22T14:29:22.927, state=1), SerialNumber(sn=1701567427449, createTime=2018-10-22T14:30:26.110, state=1), SerialNumber(sn=1699139396606, createTime=2018-10-22T14:30:56.140, state=1), SerialNumber(sn=1699016620195, createTime=2018-10-22T15:15:26.160, state=1), SerialNumber(sn=1701264879374, createTime=2018-10-22T16:04:03.697, state=1), SerialNumber(sn=1699166904725, createTime=2018-10-22T16:11:51.837, state=1), SerialNumber(sn=1698670616008, createTime=2018-10-22T16:16:53.440, state=1), SerialNumber(sn=1700629784246, createTime=2018-10-22T16:21:33.170, state=1), SerialNumber(sn=1699557818155, createTime=2018-10-22T16:27:01.053, state=1), SerialNumber(sn=1700864000688, createTime=2018-10-22T16:28:49.833, state=1), SerialNumber(sn=1701459654730, createTime=2018-10-22T16:29:22.673, state=1), SerialNumber(sn=1700641833290, createTime=2018-10-22T16:29:31.420, state=1), SerialNumber(sn=1702058853184, createTime=2018-10-22T16:34:03.360, state=1), SerialNumber(sn=1700114087593, createTime=2018-10-22T16:34:58.397, state=1), SerialNumber(sn=1701501690446, createTime=2018-10-22T16:45:08.963, state=1), SerialNumber(sn=1699955750018, createTime=2018-10-22T16:51:50.337, state=1), SerialNumber(sn=1699338233357, createTime=2018-10-22T16:52:19.853, state=1), SerialNumber(sn=1698794366647, createTime=2018-10-22T16:58:50.553, state=1), SerialNumber(sn=1698244265595, createTime=2018-10-22T17:00:56.007, state=1), SerialNumber(sn=1699990521347, createTime=2018-10-22T17:13:46.517, state=1), SerialNumber(sn=1699903389644, createTime=2018-10-22T17:20:45.460, state=1), SerialNumber(sn=1700909140572, createTime=2018-10-22T17:21:56.443, state=1), SerialNumber(sn=1701025244334, createTime=2018-10-22T17:22:57.593, state=1), SerialNumber(sn=1700662360432, createTime=2018-10-22T17:27:01.487, state=1), SerialNumber(sn=1700362366492, createTime=2018-10-22T17:30:48.593, state=1), SerialNumber(sn=1701023787934, createTime=2018-10-22T17:31:05.207, state=1), SerialNumber(sn=1700007453476, createTime=2018-10-22T17:35:34.937, state=1), SerialNumber(sn=1700020637843, createTime=2018-10-22T17:41:46.377, state=1), SerialNumber(sn=1698424205043, createTime=2018-10-22T17:42:31.557, state=1), SerialNumber(sn=1699109141267, createTime=2018-10-22T17:50:45.327, state=1), SerialNumber(sn=1700056604499, createTime=2018-10-22T17:57:45.040, state=1), SerialNumber(sn=1699546750486, createTime=2018-10-22T18:00:19.377, state=1), SerialNumber(sn=1699685959478, createTime=2018-10-22T18:16:58.567, state=1), SerialNumber(sn=1701663904703, createTime=2018-10-22T18:18:17.487, state=1), SerialNumber(sn=1698985585435, createTime=2018-10-22T18:19:13.747, state=1), SerialNumber(sn=1700108454162, createTime=2018-10-22T18:20:52.257, state=1), SerialNumber(sn=1701512887997, createTime=2018-10-22T18:21:23.690, state=1), SerialNumber(sn=1700731565131, createTime=2018-10-22T18:26:24.010, state=1), SerialNumber(sn=1699838349323, createTime=2018-10-22T18:31:12.707, state=1), SerialNumber(sn=1698481071985, createTime=2018-10-22T18:35:47.567, state=1), SerialNumber(sn=1699918301241, createTime=2018-10-22T18:46:44.087, state=1), SerialNumber(sn=1701447816162, createTime=2018-10-22T18:50:28.790, state=1), SerialNumber(sn=1700264099314, createTime=2018-10-22T20:22:54.880, state=1), SerialNumber(sn=1702131568224, createTime=2018-10-22T20:27:48.820, state=1), SerialNumber(sn=1701843697736, createTime=2018-10-23T08:23:25.423, state=1), SerialNumber(sn=1700108969033, createTime=2018-10-23T08:36:53.610, state=1), SerialNumber(sn=1699247016783, createTime=2018-10-23T08:49:41.853, state=2), SerialNumber(sn=1698815800874, createTime=2018-10-23T09:32:55.430, state=1), SerialNumber(sn=1699652954846, createTime=2018-10-23T10:14:30.803, state=1), SerialNumber(sn=1699304283198, createTime=2018-10-24T09:50:31.770, state=1), SerialNumber(sn=1701496053235, createTime=2018-10-24T09:54:28.427, state=1), SerialNumber(sn=1700679040183, createTime=2018-10-24T09:56:44.997, state=1), SerialNumber(sn=1701797692114, createTime=2018-10-24T10:06:59.467, state=1)])])]
+10:06:59.511 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq URL Post http://a.b.com/assess/123456/activity/testee/result/sn_email?format=json&beisen_account=j@h.com&activity_id=481810
+10:06:59.511 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq Post Params: email_sn_list=%5B%7B%22email%22%3A%221264061151%40qq.com%22%2C%22sn%22%3A%221500414045388%22%7D%2C%7B%22email%22%3A%22z%40b.com%22%2C%22sn%22%3A%221501220703905%22%7D%5D
+10:06:59.730 [main] DEBUG com.github.bingoohuang.ceping.beisen.impl.HttpReq Response: [
+  {
+    "activity_id": 481810,
+    "testee_list": [
+      {
+        "email": "1@q.com",
+        "sn_list": [
+          {
+            "sn": "1500414045388",
+            "test_report_list": [
+              {
+                "create_time": "2018-10-18T20:27:59.047",
+                "test": {
+                  "id": "914093E6-CB26-4689-998D-F5AC9DD1FB5D",
+                  "name": "能力倾向计算机自适应测验",
+                  "cent": "35.0000000000",
+                  "subcent": "",
+                  "type": "1",
+                  "answer_effective": null,
+                  "dimension_list": [
+                    {
+                      "id": "98E52935-2CC1-492E-ABBA-E7916482DF0A",
+                      "name": "逻辑推理",
+                      "cent": "33.0000000000",
+                      "type": "BasicDimension"
+                    },
+                    {
+                      "id": "76F9C154-CDA6-415D-954D-56A9E1530D7B",
+                      "name": "数学能力",
+                      "cent": "34.0000000000",
+                      "type": "BasicDimension"
+                    },
+                    {
+                      "id": "F72689E2-F799-40FC-BBCF-67AB5FB6BE68",
+                      "name": "言语能力",
+                      "cent": "39.0000000000",
+                      "type": "BasicDimension"
+                    }
+                  ],
+                  "exampaperinfo_list": null,
+                  "examineStatus": 0,
+                  "isCanMaunal": 0,
+                  "examsubjectivepartcent": null,
+                  "examobjectivepartcent": null,
+                  "useTime": 0,
+                  "consistency": "0.0000000000",
+                  "socialCommendation": "0.0000000000",
+                  "interuptCount": 0
+                },
+                "report_list": [
+                  {
+                    "name": "能力倾向计算机自适应测评报告",
+                    "url": "http://d.b.com/report2/123456/1539865686/123.pdf?sig_d=1&sig_e=j@h.com&sig_t=1540346819&sig_v=1&sig=456",
+                    "type": "ALL",
+                    "report_no": "ad9e9504-fff4-4075-b4a9-48ba491b85e5"
+                  }
+                ]
+              }
+            ],
+            "summaryreport": {
+              "name": "面试报告",
+              "Id": null,
+              "type": null,
+              "url": "http://a.b.com/Report/SummaryReport?Elink=123&ElinkID=e9efc43f-078b-472d-8aa8-7540b17f172b"
+            },
+            "composite_report_list": []
+          }
+        ],
+        "remark": ""
+      },
+      {
+        "email": "z@b.com",
+        "sn_list": [
+          {
+            "sn": "1501220703905",
+            "test_report_list": [
+              {
+                "create_time": "2018-10-22T15:36:44.927",
+                "test": {
+                  "id": "914093E6-CB26-4689-998D-F5AC9DD1FB5D",
+                  "name": "能力倾向计算机自适应测验",
+                  "cent": "51.0000000000",
+                  "subcent": "",
+                  "type": "1",
+                  "answer_effective": null,
+                  "dimension_list": [
+                    {
+                      "id": "98E52935-2CC1-492E-ABBA-E7916482DF0A",
+                      "name": "逻辑推理",
+                      "cent": "45.0000000000",
+                      "type": "BasicDimension"
+                    },
+                    {
+                      "id": "76F9C154-CDA6-415D-954D-56A9E1530D7B",
+                      "name": "数学能力",
+                      "cent": "37.0000000000",
+                      "type": "BasicDimension"
+                    },
+                    {
+                      "id": "F72689E2-F799-40FC-BBCF-67AB5FB6BE68",
+                      "name": "言语能力",
+                      "cent": "70.0000000000",
+                      "type": "BasicDimension"
+                    }
+                  ],
+                  "exampaperinfo_list": null,
+                  "examineStatus": 0,
+                  "isCanMaunal": 0,
+                  "examsubjectivepartcent": null,
+                  "examobjectivepartcent": null,
+                  "useTime": 0,
+                  "consistency": "0.0000000000",
+                  "socialCommendation": "0.0000000000",
+                  "interuptCount": 1
+                },
+                "report_list": [
+                  {
+                    "name": "能力倾向计算机自适应测评报告",
+                    "url": "http://d.b.com/report2/123456/1540259303/123.pdf?sig_d=1&sig_e=j@h.com&sig_t=1540346819&sig_v=1&sig=456",
+                    "type": "ALL",
+                    "report_no": "7a9cd51c-a58f-47a7-9d64-793017254352"
+                  }
+                ]
+              }
+            ],
+            "summaryreport": {
+              "name": "面试报告",
+              "Id": null,
+              "type": null,
+              "url": "http://a.b.com/Report/SummaryReport?Elink=123&ElinkID=456"
+            },
+            "composite_report_list": []
+          }
+        ],
+        "remark": ""
+      }
+    ]
+  }
+]
+
+
+[ActivityTesteeResult(activityId=481810, reports=[TesteeReport(email=1@q.com, snReports=[SnReport(sn=1500414045388, testReports=[TestReport(createTime=2018-10-18T20:27:59.047, test=Test(name=能力倾向计算机自适应测验, cent=35.0000000000, type=1, dimensions=[ResultDimension(id=98E52935-2CC1-492E-ABBA-E7916482DF0A, name=逻辑推理, cent=33.0000000000), ResultDimension(id=76F9C154-CDA6-415D-954D-56A9E1530D7B, name=数学能力, cent=34.0000000000), ResultDimension(id=F72689E2-F799-40FC-BBCF-67AB5FB6BE68, name=言语能力, cent=39.0000000000)]), reports=[Report(name=能力倾向计算机自适应测评报告, url=http://d.b.com/report2/123456/1539865686/abc.pdf?sig_d=1&sig_e=j@h.com&sig_t=1540346819&sig_v=1&sig=62fc99f0e92e99d9f379de49749b5f329b56b0d5)])])]), TesteeReport(email=z@b.com snReports=[SnReport(sn=1501220703905, testReports=[TestReport(createTime=2018-10-22T15:36:44.927, test=Test(name=能力倾向计算机自适应测验, cent=51.0000000000, type=1, dimensions=[ResultDimension(id=98E52935-2CC1-492E-ABBA-E7916482DF0A, name=逻辑推理, cent=45.0000000000), ResultDimension(id=76F9C154-CDA6-415D-954D-56A9E1530D7B, name=数学能力, cent=37.0000000000), ResultDimension(id=F72689E2-F799-40FC-BBCF-67AB5FB6BE68, name=言语能力, cent=70.0000000000)]), reports=[Report(name=能力倾向计算机自适应测评报告, url=http://d.b.com/report2/123456/1540259303/123.pdf?sig_d=1&sig_e=j@h.com&sig_t=1540346819&sig_v=1&sig=8ef59b8bf08e0e3c0a4fa6b930dfd2881421411a)])])])])]

@@ -1,0 +1,40 @@
+{
+  "activity_list": [
+    {
+      "id": 481810,
+      "name": "测评系统test",
+      "description": "",
+      "state": 1,
+      "create_date": "2018-10-15T15:21:25.367"
+    },
+    {
+      "id": 404889,
+      "name": "高潜",
+      "description": "",
+      "state": 1,
+      "create_date": "2018-01-12T15:02:12.497"
+    },
+    {
+      "id": 401081,
+      "name": "CATA一轮",
+      "description": "",
+      "state": 1,
+      "create_date": "2017-12-26T16:28:20.667"
+    },
+    {
+      "id": 389051,
+      "name": "认知能力测试",
+      "description": "",
+      "state": 1,
+      "create_date": "2017-11-13T10:41:30.177"
+    },
+    {
+      "id": 387249,
+      "name": "管理技能测试",
+      "description": "",
+      "state": 1,
+      "create_date": "2017-11-06T15:44:10.383"
+    }
+  ],
+  "total_count": 5
+}
