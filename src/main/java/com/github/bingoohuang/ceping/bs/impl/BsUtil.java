@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public interface BsUtil {
-    Properties env = Classpath.loadEnvProperties("bs-config.properties");
+    Properties env = Classpath.loadProperties("bs-config.properties");
 
     static String get(String name) {
         return env.getProperty(name);

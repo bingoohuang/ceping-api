@@ -16,7 +16,7 @@ public class BsApiTest {
         System.out.println(activities);
     }
 
-    @Test
+    @Test @Ignore
     public void inviteTestees() {
         // 第二步.邀请受测者(不发送邮件和短信),一次最多邀请1000人
         val userList = Lists.newArrayList(new Testee("d@r.com"));
@@ -25,7 +25,7 @@ public class BsApiTest {
         System.out.println(inviteTesteeResult);
     }
 
-    @Test
+    @Test @Ignore
     public void getActivityTesteeStates() {
         // 通过邮箱取作答状态，再根据状态获取作答结果，每次最多50个人的结果
         val activityTesteeStates = new BsApi().getActivityTesteeStates("d@r.com");

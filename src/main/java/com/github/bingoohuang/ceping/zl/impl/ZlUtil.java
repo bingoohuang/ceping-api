@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public interface ZlUtil {
-    Properties env = Classpath.loadEnvProperties("zl-config.properties");
+    Properties env = Classpath.loadProperties("zl-config.properties");
 
     static String get(String name) {
         return env.getProperty(name);
